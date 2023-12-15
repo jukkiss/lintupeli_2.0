@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css" />
+<link href="css/style.css" rel="stylesheet">
+<script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js" defer></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/ionicons/dist/ionicons/ionicons.esm.js" defer></script>
+<script nomodule src="https://cdn.jsdelivr.net/npm/ionicons/dist/ionicons/ionicons.js" defer></script>
+<script src="js/main.js" defer></script>
+<title>Lintupeli</title>
+</head>
+<body>
+<div class="container">
+   <header class="page-header">
+       <nav>
+           <ul class="flex-wrap space-evenly">
+               <li>
+                 <a class="button button-white" href="index.html">Peli</a>
+               </li>
+               <li><img class="lead-img" src="img/logo-01.png" alt="Lintupeli"></li>
+               <li>
+                 <a class="button button-white" href="about.html">Info</a>
+               </li>
+           </ul>
+       </nav>
+   </header>
+   <main class="flex-wrap">
+       <div class="boxes">
+           <section class="box">
+               <header>
+                   <td colspan="3">
+                           <h3 id="player-name">Pelaajan Nimi</h3>
+                       </td>
+               </header>
+               <table>
+                   <tr>
+                       <td><b>Sijainti:</b><span id="sijainti"></span></td>
+                       <td><b>Sää:</b><span id="saa"></span></td>
+                       <td><b>Budjetti:</b> <span id="budget">0</span>€</td>
+
+
+                       <td><b>Kamera:</b> <span id="consumed"></span></td>
+
+
+                       <td> <a  id="kamera">Päivitä Kamera</a></td>
+                   </tr>
+               </table>
+           </section>
+       </div>
+       <div id="map">
+           <!-- <img class="responsive-img" src="img/finland.svg" alt="map of finland"> -->
+       </div>
+   </main>
+   <footer class="page-footer">
+       <p>Lintupeli</p>
+   </footer>
+   <div class="goal hide">
+       <form id="terrain-form">
+           <h2>Valitse maasto mihin haluat mennä:</h2>
+       </form>
+   </div>
+   <div class="bird hide">
+      <button id="bird" type="button"></button>
+   </div>
+</div>
+<div id="player-modal">
+   <form id="player-form">
+       <input id="player-input" type="text" placeholder="Pelaajan Nimi" required>
+       <input type="submit" value="Aloita Peli">
+   </form>
+</div>
+</body>
+</html>
+
+
+
